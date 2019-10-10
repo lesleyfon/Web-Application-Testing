@@ -21,8 +21,12 @@ export default DashBoard
 
 const BtnStyles = styled.div`
     margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 400px;
     button{
-        margin-right: 10px;
         padding: 10px 20px;
         font-size: 1.1rem;
         border-radius: 5px;
