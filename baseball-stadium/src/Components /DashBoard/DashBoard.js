@@ -2,13 +2,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function DashBoard(props) {
+function DashBoard({handleClick}) {
     const btnText =['strike', 'ball', 'foul', 'hit']
     return (
 
         <BtnStyles>
             {btnText.map( btn => { 
-                return <button key = { btn } onClick={e=>{props.handleClick( e, btn)}} > { btn } </button>
+                return <button key = { btn } onClick={e=>{handleClick( e, btn)}} > { btn } </button>
             })}
         </BtnStyles>
     )

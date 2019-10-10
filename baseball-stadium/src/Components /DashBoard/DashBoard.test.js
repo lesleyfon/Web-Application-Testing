@@ -26,15 +26,28 @@ test('Render hit', () => {
     const hit = dashBoardComponent.getByText(/hit/i)
     expect(hit).toBeVisible()
 })
-test('Render right Button text', () => {
-    const dashBoardComponent = rtl.render(<DashBoard />);
-   
-    // expect(strike).toBeVisible()
-})
-// test('Hit Be visible', () => {
-//     const displayComponent = rtl.render(<DashBoard />);
-//     const buttons = Array.from(displayComponent.container.getElementsByTagName('button').namedItem('button'))
-//     console.log(buttons)
-//     // expect(buttons).toBe('<button>')
+
+// test('OnClick', ()=>{
+//     const dashBoardComponent = rtl.render(<DashBoard 
+//         handleClick={handleClick}/>);
+//     const OnClick = jest.fn();
+//     rtl.fireEvent.click(dashBoardComponent.getByText('strike'));
+//     console.log(OnClick)
+//     expect(OnClick).toHaveBeenCalled();
 // })
-// // check if they are buttons 
+
+
+
+
+
+
+
+
+
+test('Make sure there are 4 buttons on the page', () => {
+    const displayComponent = rtl.render(<DashBoard />);
+    const buttons = Array.from(displayComponent.container.getElementsByTagName('button'))
+    console.log(buttons.length)
+    expect(buttons.length).toBe(4)
+})
+// check if they are buttons 
