@@ -1,19 +1,30 @@
 //provide a button that the person in charge can press every time there is a strike, ball, foul or hit.
 // there is NO need to specify the type of hit (single, double, etc).
 // changes recorded on this component should update the information shown by the Display component.
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 
 function DashBoard() {
     const btnText =['strike', 'ball', 'foul', 'hit']
     return (
-        
-        <div>
+
+        <BtnStyles>
             {btnText.map( btn => { 
                 return <button key = { btn } > { btn } </button>
             })}
-        </div>
+        </BtnStyles>
     )
 }
 
 
 export default DashBoard
+
+const BtnStyles = styled.div`
+    margin: 0 auto;
+    button{
+        margin-right: 10px;
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        border-radius: 5px;
+    }
+`;
