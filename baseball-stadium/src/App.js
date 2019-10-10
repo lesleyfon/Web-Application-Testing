@@ -1,10 +1,11 @@
 import React from 'react';
+import Display from './Components /Display/Display';
 
 function App() {
   return (
-    <div className="App">
-     <h1>Hello Test Test</h1>
-    </div>
+    <>
+      <Display />
+    </>
   );
 }
 
